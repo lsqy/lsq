@@ -444,7 +444,7 @@
                     });
                 });
             } else if (cssValue === undefined) { //style只能获得到行内样式，所以采用下面的能够获得到css中的样式
-                return window.getComputedStyle(this[0])[cssName]; //课下完善一下ie的currentStyle兼容性，封装一个方法
+                return window.getComputedStyle(this[0])[cssName]; 
             } else {
                 return this.each(function() {
                     this.style[cssName] = cssValue;
@@ -477,7 +477,7 @@
                 if (this.className != undefined) {
                     var className = this.className; //这里又用了一个变量先把这个存起来主要是为了考虑到性能方面， 所以先对临时变量做操作
                     // 最后一次加到界面中的元素中
-                    className += ' ' + cName; //这里会出现多次添加cName么，后期可以对进行一下字符串分隔来处理同时添加多个类名
+                    className += ' ' + cName; 
                     className = Lsq.trim(className); //注意这里的trim，作为一个严谨的程序员来说应该要考虑细致的
                 } else {
                     this.className = cName;
